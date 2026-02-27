@@ -1,0 +1,122 @@
+/* Forex Trader Dashboard - Additional Styles */
+
+/* Card Component */
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.card-header {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 0.4rem;
+}
+
+/* Progress Bars */
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: #1f2937;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s ease;
+}
+
+/* RSI Gauge */
+.rsi-gauge-wrap {
+  position: relative;
+  width: 90px;
+  height: 55px;
+}
+
+.rsi-gauge {
+  width: 90px;
+  height: 55px;
+}
+
+.rsi-center {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Market State Chips */
+.state-chip {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  background: #1f2937;
+  color: #6b7280;
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.state-chip-active {
+  background: #1e3a5f;
+  color: #60a5fa;
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* Pulse / Glow animations */
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 4px rgba(234, 179, 8, 0.8); }
+  50% { text-shadow: 0 0 12px rgba(234, 179, 8, 1); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 1.2s ease-in-out infinite;
+}
+
+@keyframes news-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* High news risk pulsing */
+.news-high {
+  animation: news-pulse 0.8s ease-in-out infinite;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card {
+    padding: 0.75rem;
+  }
+  .rsi-gauge-wrap {
+    width: 70px;
+    height: 42px;
+  }
+  .rsi-gauge {
+    width: 70px;
+    height: 42px;
+  }
+}
+
+/* Arc gauge SVG transition */
+#rsi-arc {
+  transition: stroke-dashoffset 0.8s ease, stroke 0.4s ease;
+}
+
+/* Connection status dot pulse */
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}

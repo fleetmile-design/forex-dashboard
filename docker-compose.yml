@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  forex-dashboard:
+    build: .
+    container_name: forex_dashboard_service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NEWS_API_URL=http://192.168.0.187:8000/api/news
+    restart: always
