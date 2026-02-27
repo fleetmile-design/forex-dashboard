@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+websockets
+httpx
+pandas
+numpy
+jinja2
+aiofiles
+python-multipart
